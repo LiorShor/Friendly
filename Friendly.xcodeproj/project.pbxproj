@@ -26,6 +26,9 @@
 		BA8CCAF32A1F7C5000903794 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAF22A1F7C5000903794 /* Storyboarded.swift */; };
 		BA8CCAF62A1F7E6300903794 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAF52A1F7E6300903794 /* MainCoordinator.swift */; };
 		BA8CCAFB2A1FA71900903794 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAFA2A1FA71900903794 /* ProfileViewController.swift */; };
+		BA8CCAFE2A1FAF9400903794 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAFD2A1FAF9400903794 /* NetworkManager.swift */; };
+		BA8CCB012A1FAFEF00903794 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCB002A1FAFEF00903794 /* Data+Extensions.swift */; };
+		BA8CCB052A1FB05000903794 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCB042A1FB05000903794 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		BA8CCAF22A1F7C5000903794 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		BA8CCAF52A1F7E6300903794 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BA8CCAFA2A1FA71900903794 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BA8CCAFD2A1FAF9400903794 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BA8CCB002A1FAFEF00903794 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		BA8CCB042A1FB05000903794 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		BA8CCAA22A1F741700903794 /* Friendly */ = {
 			isa = PBXGroup;
 			children = (
+				BA8CCAFC2A1FAF8400903794 /* Networking */,
 				BA8CCAF82A1FA6C500903794 /* Models */,
 				BA8CCAF72A1FA6BF00903794 /* Modules */,
 				BA8CCAF42A1F7E5300903794 /* Utilities */,
@@ -162,8 +169,10 @@
 		BA8CCAF42A1F7E5300903794 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BA8CCAFF2A1FAFE300903794 /* Extensions */,
 				BA8CCAEF2A1F763C00903794 /* Protocols */,
 				BA8CCAF52A1F7E6300903794 /* MainCoordinator.swift */,
+				BA8CCB042A1FB05000903794 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -189,6 +198,22 @@
 				BA8CCAFA2A1FA71900903794 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		BA8CCAFC2A1FAF8400903794 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CCAFD2A1FAF9400903794 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BA8CCAFF2A1FAFE300903794 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CCB002A1FAFEF00903794 /* Data+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,12 +362,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA8CCAF12A1F764800903794 /* Coordinator.swift in Sources */,
+				BA8CCB052A1FB05000903794 /* Constants.swift in Sources */,
 				BA8CCAF62A1F7E6300903794 /* MainCoordinator.swift in Sources */,
 				BA8CCAA82A1F741700903794 /* MainViewController.swift in Sources */,
 				BA8CCAF32A1F7C5000903794 /* Storyboarded.swift in Sources */,
+				BA8CCAFE2A1FAF9400903794 /* NetworkManager.swift in Sources */,
 				BA8CCAFB2A1FA71900903794 /* ProfileViewController.swift in Sources */,
 				BA8CCAA42A1F741700903794 /* AppDelegate.swift in Sources */,
 				BA8CCAA62A1F741700903794 /* SceneDelegate.swift in Sources */,
+				BA8CCB012A1FAFEF00903794 /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

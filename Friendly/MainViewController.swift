@@ -14,9 +14,5 @@ class MainViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func onButtonTapped(_ sender: Any) {
-        coordinator?.openSettings()
-    }
 }
 
