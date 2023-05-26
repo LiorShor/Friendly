@@ -12,6 +12,8 @@ class MainViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        coordinator?.showLogin()
+        coordinator?.startPhoneRegistration()
         // Do any additional setup after loading the view.
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Data+Extensions.swift
+//  Data+Extension.swift
 //  Friendly
 //
 //  Created by Lior Shor on 25/05/2023.

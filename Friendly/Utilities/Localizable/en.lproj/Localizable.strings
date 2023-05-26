@@ -1,0 +1,14 @@
+/* 
+  Localizable (Hebrew).strings
+  Friendly
+
+  Created by Lior Shor on 25/05/2023.
+  
+*/
+
+
+// Mark: - Registration
+
+"SIGN_IN_WITH_APPLE" = "Sign in with Apple";
+"SIGN_IN_WITH_PHONE_NUMBER" = "Sign in with phone number";
+

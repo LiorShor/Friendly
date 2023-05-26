@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var childCoordinators = [Coordinator]()
+    var actions: Actions
+    var parameters: Parameters
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
-    
-    init(navigationController: UINavigationController) {
+
+    required init(parameters: Parameters, actions: Actions, navigationController: UINavigationController) {
+        self.parameters = parameters
+        self.actions = actions
         self.navigationController = navigationController
     }
     
@@ -30,5 +34,11 @@ class MainCoordinator: Coordinator {
         let profileViewController = ProfileViewController.instantiate()
         profileViewController.coordinator = self
         navigationController.pushViewController(profileViewController, animated: true)
+    }
+
+    func startPhoneRegistration() {
+        let child = LoginCoordinator(parameters: parameters, actions: actions, navigationController: navigationController)
+        childCoordinators.append(child)
+        child.start()
     }
 }
