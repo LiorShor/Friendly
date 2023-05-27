@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: Coordinator & LoginCoordinating {
+class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinating {
     var actions: Actions
     var parameters: Parameters
     var childCoordinators: [Coordinator] = []
@@ -29,7 +29,9 @@ class LoginCoordinator: Coordinator & LoginCoordinating {
     }
 
     func signInWithPhoneNumber() {
-        
+        let loginViewController = PhoneNumberViewController.instantiate()
+        PhoneNumberWireframe.prepare(loginViewController, actions: actions, parameters: PhoneNumberParameters(), coordinator: self)
+        navigationController.pushViewController(loginViewController, animated: true)
     }
     
     func showLogin() {

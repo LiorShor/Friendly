@@ -11,4 +11,6 @@
 
 "SIGN_IN_WITH_APPLE" = "Sign in with Apple";
 "SIGN_IN_WITH_PHONE_NUMBER" = "Sign in with phone number";
-
+"CAN_WE_GET_YOUR_NUMBER" = "Can we get your number?";
+"NEXT" = "Next";
+"SMS_VERIFICATION_NOTE" = "We'll text you a code to verify you're really you.\nMessage and data rates may apply.";

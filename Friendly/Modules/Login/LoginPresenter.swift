@@ -34,4 +34,8 @@ class LoginPresenter: Presentable {
         // TODO: replace `nil` with data from paramaterable
         view?.setupTableView(with: nil)
     }
+    
+    func onSignInWithPhoneTapped() {
+        coordinator?.signInWithPhoneNumber()
+    }
 }

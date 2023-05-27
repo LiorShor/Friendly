@@ -22,9 +22,13 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func onSignInWithPhone(_ sender: Any) {
-        
+        presenter.onSignInWithPhoneTapped()
     }
     
+    
+    override func viewDidLoad() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
+    }
     func set(_ presenter: LoginPresenter) {
         self.presenter = presenter
     }
@@ -48,5 +52,10 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
 extension LoginViewController: LoginViewable {
     func setupTableView(with modelCollection: ModelCollection?) {
         
+    }
+}
+extension LoginViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
