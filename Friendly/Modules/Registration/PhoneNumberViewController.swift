@@ -42,6 +42,10 @@ class PhoneNumberViewController: BaseViewController, Storyboarded {
     @IBAction func onNextButtonTapped(_ sender: UIButton) {
         
     }
+    
+    @IBAction func didTapExtensionButton(_ sender: UIButton) {
+        presenter.didTapExtensionButton()
+    }
 }
 
 extension PhoneNumberViewController: PhoneNumberViewable {

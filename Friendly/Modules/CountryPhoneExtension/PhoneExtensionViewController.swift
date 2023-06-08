@@ -8,28 +8,28 @@
 import UIKit
 import SourceModel
 
-class PhoneExtensionViewController: UIViewController, SourceTypePresentable {
+class PhoneExtensionViewController: UIViewController, Storyboarded {
 
     // MARK:- Properties
 
     private var presenter: PhoneExtensionPresenter!
-    var dataSource: PhoneExtensionDataSource!
-    var delegate: PhoneExtensionDelegate!
-
+    var dataSource: TableDataSource!
+    var delegate: TableDelegate!
+    
     // MARK:- Outlets
 
+    @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
-
-    // MARK:- Typealias
-
-    typealias DataSource = PhoneExtensionDataSource
-    typealias Delegate = PhoneExtensionDelegate
 
     // MARK:- LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    
+    private func setupUI() {
+        searchBar.delegate = self
     }
 
     func set(_ presenter: PhoneExtensionPresenter) {
@@ -38,24 +38,29 @@ class PhoneExtensionViewController: UIViewController, SourceTypePresentable {
 }
 
 extension PhoneExtensionViewController: PhoneExtensionViewable {
-
+    
     func setupTableView(with modelCollection: ModelCollection?) {
-
+        
         guard dataSource == nil else {
             delegate.update(modelCollection: modelCollection)
             dataSource.update(modelCollection: modelCollection)
-
-            tableView.reloadData()
+            tableView.backgroundView = nil
+            tableView.animateWithFade()
             return
         }
-
-        delegate = PhoneExtensionDelegate(modelCollection: modelCollection)
-        dataSource = PhoneExtensionDataSource(modelCollection: modelCollection)
-
-        // Uncomment when registering XIB files
-        // tableView.register(cellTypes: <#T##UITableViewCell#>.self, <#T##UITableViewCell#>.self)
-
+        
+        delegate = TableDelegate(modelCollection: modelCollection)
+        dataSource = TableDataSource(modelCollection: modelCollection)
+        
+        tableView.register(cellTypes: CountryExtensionCell.self)
+        
         tableView.delegate = delegate
         tableView.dataSource = dataSource
+    }
+}
+
+extension PhoneExtensionViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.filterSearch(text: searchText)
     }
 }

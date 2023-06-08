@@ -28,13 +28,22 @@
 		BA75C92F2A212488008C3745 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C92E2A212488008C3745 /* UITextfield+Extension.swift */; };
 		BA75C93A2A21F664008C3745 /* PhoneExtensionActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9312A21F664008C3745 /* PhoneExtensionActionable.swift */; };
 		BA75C93B2A21F664008C3745 /* PhoneExtensionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9322A21F664008C3745 /* PhoneExtensionPresenter.swift */; };
-		BA75C93C2A21F664008C3745 /* PhoneExtensionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9332A21F664008C3745 /* PhoneExtensionDataSource.swift */; };
-		BA75C93D2A21F664008C3745 /* PhoneExtensionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA75C9342A21F664008C3745 /* PhoneExtensionViewController.storyboard */; };
 		BA75C93E2A21F664008C3745 /* PhoneExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9352A21F664008C3745 /* PhoneExtensionViewController.swift */; };
 		BA75C93F2A21F664008C3745 /* PhoneExtensionParameterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9362A21F664008C3745 /* PhoneExtensionParameterable.swift */; };
-		BA75C9402A21F664008C3745 /* PhoneExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9372A21F664008C3745 /* PhoneExtensionDelegate.swift */; };
 		BA75C9412A21F664008C3745 /* PhoneExtensionCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9382A21F664008C3745 /* PhoneExtensionCoordinating.swift */; };
 		BA75C9422A21F664008C3745 /* PhoneExtensionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9392A21F664008C3745 /* PhoneExtensionWireframe.swift */; };
+		BA75C9502A21F85C008C3745 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C94F2A21F85C008C3745 /* UITableView+Extension.swift */; };
+		BA75C9542A21F98C008C3745 /* CountryExtensionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9522A21F98C008C3745 /* CountryExtensionCell.swift */; };
+		BA75C9552A21F98C008C3745 /* CountryExtensionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA75C9532A21F98C008C3745 /* CountryExtensionCell.xib */; };
+		BA75C9572A21FAF7008C3745 /* CountryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9562A21FAF7008C3745 /* CountryExtension.swift */; };
+		BA75C95A2A21FC7A008C3745 /* CountryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = BA75C9592A21FC7A008C3745 /* CountryCodes.json */; };
+		BA75C95E2A21FF35008C3745 /* StaticDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C95D2A21FF35008C3745 /* StaticDataProvider.swift */; };
+		BA75C9602A21FF68008C3745 /* StaticEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C95F2A21FF68008C3745 /* StaticEndPoints.swift */; };
+		BA75C9622A2200F4008C3745 /* JSONResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9612A2200F4008C3745 /* JSONResolver.swift */; };
+		BA75C9702A22300D008C3745 /* CountriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C96F2A22300D008C3745 /* CountriesResponse.swift */; };
+		BA75C9732A223059008C3745 /* JSONResolver+Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9722A223059008C3745 /* JSONResolver+Countries.swift */; };
+		BA75C9752A2662A8008C3745 /* DataProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9742A2662A8008C3745 /* DataProviders.swift */; };
+		BA75C9772A267541008C3745 /* CountriesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA75C9762A267541008C3745 /* CountriesCollection.swift */; };
 		BA8CCAA42A1F741700903794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAA32A1F741700903794 /* AppDelegate.swift */; };
 		BA8CCAA62A1F741700903794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAA52A1F741700903794 /* SceneDelegate.swift */; };
 		BA8CCAA82A1F741700903794 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CCAA72A1F741700903794 /* MainViewController.swift */; };
@@ -118,13 +127,22 @@
 		BA75C92E2A212488008C3745 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		BA75C9312A21F664008C3745 /* PhoneExtensionActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionActionable.swift; sourceTree = "<group>"; };
 		BA75C9322A21F664008C3745 /* PhoneExtensionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionPresenter.swift; sourceTree = "<group>"; };
-		BA75C9332A21F664008C3745 /* PhoneExtensionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionDataSource.swift; sourceTree = "<group>"; };
-		BA75C9342A21F664008C3745 /* PhoneExtensionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneExtensionViewController.storyboard; sourceTree = "<group>"; };
 		BA75C9352A21F664008C3745 /* PhoneExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionViewController.swift; sourceTree = "<group>"; };
 		BA75C9362A21F664008C3745 /* PhoneExtensionParameterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionParameterable.swift; sourceTree = "<group>"; };
-		BA75C9372A21F664008C3745 /* PhoneExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionDelegate.swift; sourceTree = "<group>"; };
 		BA75C9382A21F664008C3745 /* PhoneExtensionCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionCoordinating.swift; sourceTree = "<group>"; };
 		BA75C9392A21F664008C3745 /* PhoneExtensionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneExtensionWireframe.swift; sourceTree = "<group>"; };
+		BA75C94F2A21F85C008C3745 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		BA75C9522A21F98C008C3745 /* CountryExtensionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryExtensionCell.swift; sourceTree = "<group>"; };
+		BA75C9532A21F98C008C3745 /* CountryExtensionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryExtensionCell.xib; sourceTree = "<group>"; };
+		BA75C9562A21FAF7008C3745 /* CountryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryExtension.swift; sourceTree = "<group>"; };
+		BA75C9592A21FC7A008C3745 /* CountryCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryCodes.json; sourceTree = "<group>"; };
+		BA75C95D2A21FF35008C3745 /* StaticDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataProvider.swift; sourceTree = "<group>"; };
+		BA75C95F2A21FF68008C3745 /* StaticEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticEndPoints.swift; sourceTree = "<group>"; };
+		BA75C9612A2200F4008C3745 /* JSONResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResolver.swift; sourceTree = "<group>"; };
+		BA75C96F2A22300D008C3745 /* CountriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResponse.swift; sourceTree = "<group>"; };
+		BA75C9722A223059008C3745 /* JSONResolver+Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONResolver+Countries.swift"; sourceTree = "<group>"; };
+		BA75C9742A2662A8008C3745 /* DataProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviders.swift; sourceTree = "<group>"; };
+		BA75C9762A267541008C3745 /* CountriesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCollection.swift; sourceTree = "<group>"; };
 		BA8CCAA02A1F741700903794 /* Friendly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8CCAA32A1F741700903794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8CCAA52A1F741700903794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8CCAF02A1F764800903794 /* Coordinator.swift */,
+				BA75C9382A21F664008C3745 /* PhoneExtensionCoordinating.swift */,
 				BA75C9202A20E313008C3745 /* PhoneNumberCoordinating.swift */,
 				BA75C8FA2A209E98008C3745 /* LoginCoordinating.swift */,
 			);
@@ -223,17 +242,56 @@
 		BA75C9302A21F63D008C3745 /* CountryPhoneExtension */ = {
 			isa = PBXGroup;
 			children = (
+				BA75C9512A21F951008C3745 /* Cells */,
 				BA75C9312A21F664008C3745 /* PhoneExtensionActionable.swift */,
 				BA75C9322A21F664008C3745 /* PhoneExtensionPresenter.swift */,
-				BA75C9332A21F664008C3745 /* PhoneExtensionDataSource.swift */,
-				BA75C9342A21F664008C3745 /* PhoneExtensionViewController.storyboard */,
 				BA75C9352A21F664008C3745 /* PhoneExtensionViewController.swift */,
 				BA75C9362A21F664008C3745 /* PhoneExtensionParameterable.swift */,
-				BA75C9372A21F664008C3745 /* PhoneExtensionDelegate.swift */,
-				BA75C9382A21F664008C3745 /* PhoneExtensionCoordinating.swift */,
 				BA75C9392A21F664008C3745 /* PhoneExtensionWireframe.swift */,
 			);
 			path = CountryPhoneExtension;
+			sourceTree = "<group>";
+		};
+		BA75C9512A21F951008C3745 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BA75C9522A21F98C008C3745 /* CountryExtensionCell.swift */,
+				BA75C9532A21F98C008C3745 /* CountryExtensionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BA75C9582A21FC25008C3745 /* Static JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BA75C9592A21FC7A008C3745 /* CountryCodes.json */,
+			);
+			path = "Static JSON";
+			sourceTree = "<group>";
+		};
+		BA75C95B2A21FF18008C3745 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				BA75C95D2A21FF35008C3745 /* StaticDataProvider.swift */,
+				BA75C9742A2662A8008C3745 /* DataProviders.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		BA75C95C2A21FF1D008C3745 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				BA75C95F2A21FF68008C3745 /* StaticEndPoints.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		BA75C9712A223041008C3745 /* JSONResolver */ = {
+			isa = PBXGroup;
+			children = (
+				BA75C9722A223059008C3745 /* JSONResolver+Countries.swift */,
+			);
+			path = JSONResolver;
 			sourceTree = "<group>";
 		};
 		BA8CCA972A1F741700903794 = {
@@ -300,6 +358,7 @@
 				BA75C9042A20A007008C3745 /* Coordinator */,
 				BA8CCAF22A1F7C5000903794 /* Storyboarded.swift */,
 				BA75C9112A20A070008C3745 /* Presentable.swift */,
+				BA75C9612A2200F4008C3745 /* JSONResolver.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -307,6 +366,7 @@
 		BA8CCAF42A1F7E5300903794 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BA75C9582A21FC25008C3745 /* Static JSON */,
 				BA75C9132A20A239008C3745 /* Base */,
 				BA8CCB062A1FB23E00903794 /* Localizable */,
 				BA8CCAFF2A1FAFE300903794 /* Extensions */,
@@ -331,6 +391,9 @@
 		BA8CCAF82A1FA6C500903794 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA75C9562A21FAF7008C3745 /* CountryExtension.swift */,
+				BA75C96F2A22300D008C3745 /* CountriesResponse.swift */,
+				BA75C9762A267541008C3745 /* CountriesCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +409,9 @@
 		BA8CCAFC2A1FAF8400903794 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BA75C9712A223041008C3745 /* JSONResolver */,
+				BA75C95C2A21FF1D008C3745 /* EndPoints */,
+				BA75C95B2A21FF18008C3745 /* DataProviders */,
 				BA8CCAFD2A1FAF9400903794 /* NetworkManager.swift */,
 			);
 			path = Networking;
@@ -361,6 +427,7 @@
 				BA8CCB392A2008D100903794 /* String+Extension.swift */,
 				BA75C92A2A20F6E7008C3745 /* UIViewController+Extension.swift */,
 				BA75C92E2A212488008C3745 /* UITextfield+Extension.swift */,
+				BA75C94F2A21F85C008C3745 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -537,9 +604,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA75C9552A21F98C008C3745 /* CountryExtensionCell.xib in Resources */,
 				BA8CCAB02A1F741800903794 /* LaunchScreen.storyboard in Resources */,
 				BA8CCB122A1FB35700903794 /* Localizable.strings in Resources */,
-				BA75C93D2A21F664008C3745 /* PhoneExtensionViewController.storyboard in Resources */,
+				BA75C95A2A21FC7A008C3745 /* CountryCodes.json in Resources */,
 				BA8CCAAD2A1F741800903794 /* Assets.xcassets in Resources */,
 				BA75C9242A20E313008C3745 /* PhoneNumberViewController.storyboard in Resources */,
 				BA8CCAAB2A1F741700903794 /* Main.storyboard in Resources */,
@@ -568,8 +636,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA75C92B2A20F6E7008C3745 /* UIViewController+Extension.swift in Sources */,
-				BA75C9402A21F664008C3745 /* PhoneExtensionDelegate.swift in Sources */,
 				BA75C91A2A20A5E4008C3745 /* Actions.swift in Sources */,
+				BA75C9502A21F85C008C3745 /* UITableView+Extension.swift in Sources */,
 				BA75C92D2A212112008C3745 /* BaseViewController.swift in Sources */,
 				BA75C9022A209E98008C3745 /* LoginCoordinating.swift in Sources */,
 				BA8CCB3A2A2008D100903794 /* String+Extension.swift in Sources */,
@@ -577,7 +645,10 @@
 				BA75C9252A20E313008C3745 /* PhoneNumberViewController.swift in Sources */,
 				BA8CCB312A1FC20F00903794 /* LoginViewController.swift in Sources */,
 				BA8CCAF12A1F764800903794 /* Coordinator.swift in Sources */,
+				BA75C9702A22300D008C3745 /* CountriesResponse.swift in Sources */,
+				BA75C9542A21F98C008C3745 /* CountryExtensionCell.swift in Sources */,
 				BA75C9232A20E313008C3745 /* PhoneNumberPresenter.swift in Sources */,
+				BA75C95E2A21FF35008C3745 /* StaticDataProvider.swift in Sources */,
 				BA8CCB332A1FC84600903794 /* UIButton+Extension.swift in Sources */,
 				BA75C93E2A21F664008C3745 /* PhoneExtensionViewController.swift in Sources */,
 				BA75C93B2A21F664008C3745 /* PhoneExtensionPresenter.swift in Sources */,
@@ -591,11 +662,12 @@
 				BA8CCAA82A1F741700903794 /* MainViewController.swift in Sources */,
 				BA8CCB172A1FB38800903794 /* Translations.swift in Sources */,
 				BA75C9412A21F664008C3745 /* PhoneExtensionCoordinating.swift in Sources */,
+				BA75C9752A2662A8008C3745 /* DataProviders.swift in Sources */,
+				BA75C9602A21FF68008C3745 /* StaticEndPoints.swift in Sources */,
 				BA8CCAF32A1F7C5000903794 /* Storyboarded.swift in Sources */,
 				BA8CCAFE2A1FAF9400903794 /* NetworkManager.swift in Sources */,
 				BA75C9262A20E313008C3745 /* PhoneNumberParameterable.swift in Sources */,
 				BA75C9422A21F664008C3745 /* PhoneExtensionWireframe.swift in Sources */,
-				BA75C93C2A21F664008C3745 /* PhoneExtensionDataSource.swift in Sources */,
 				BA75C9002A209E98008C3745 /* LoginParameterable.swift in Sources */,
 				BA75C8FD2A209E98008C3745 /* LoginPresenter.swift in Sources */,
 				BA8CCAFB2A1FA71900903794 /* ProfileViewController.swift in Sources */,
@@ -604,10 +676,14 @@
 				BA8CCB352A1FC89500903794 /* UILabel+Extension.swift in Sources */,
 				BA75C93F2A21F664008C3745 /* PhoneExtensionParameterable.swift in Sources */,
 				BA8CCAA42A1F741700903794 /* AppDelegate.swift in Sources */,
+				BA75C9622A2200F4008C3745 /* JSONResolver.swift in Sources */,
 				BA75C93A2A21F664008C3745 /* PhoneExtensionActionable.swift in Sources */,
+				BA75C9732A223059008C3745 /* JSONResolver+Countries.swift in Sources */,
+				BA75C9572A21FAF7008C3745 /* CountryExtension.swift in Sources */,
 				BA75C9032A209E98008C3745 /* LoginWireframe.swift in Sources */,
 				BA8CCAA62A1F741700903794 /* SceneDelegate.swift in Sources */,
 				BA8CCB012A1FAFEF00903794 /* Data+Extension.swift in Sources */,
+				BA75C9772A267541008C3745 /* CountriesCollection.swift in Sources */,
 				BA75C9182A20A5D2008C3745 /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

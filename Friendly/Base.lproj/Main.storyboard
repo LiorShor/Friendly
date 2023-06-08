@@ -88,40 +88,46 @@
             </objects>
             <point key="canvasLocation" x="-866.41221374045801" y="391.54929577464793"/>
         </scene>
-        <!--View Controller-->
+        <!--Phone Extension View Controller-->
         <scene sceneID="LgZ-1J-12H">
             <objects>
-                <viewController id="eNG-kf-D2j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneExtensionViewController" id="eNG-kf-D2j" customClass="PhoneExtensionViewController" customModule="Friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWU-pd-re3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ms-2C-xvo">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="20" y="140" width="353" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableFooterView" contentMode="redraw" placeholder="Search" id="rbA-g8-oKZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="eNG-kf-D2j" id="cVg-a2-AyP"/>
-                                    </connections>
-                                </searchBar>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kKu-vO-ukJ">
+                                <rect key="frame" x="20" y="64" width="353" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eNG-kf-D2j" id="hs4-tf-Y0u"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j9S-gG-hLt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j9S-gG-hLt" firstAttribute="trailing" secondItem="6Ms-2C-xvo" secondAttribute="trailing" id="DQT-yk-FzK"/>
-                            <constraint firstItem="6Ms-2C-xvo" firstAttribute="leading" secondItem="j9S-gG-hLt" secondAttribute="leading" id="LG0-c5-hRP"/>
-                            <constraint firstItem="6Ms-2C-xvo" firstAttribute="top" secondItem="j9S-gG-hLt" secondAttribute="top" id="egC-HD-Piy"/>
+                            <constraint firstItem="j9S-gG-hLt" firstAttribute="trailing" secondItem="6Ms-2C-xvo" secondAttribute="trailing" constant="20" id="DQT-yk-FzK"/>
+                            <constraint firstItem="j9S-gG-hLt" firstAttribute="trailing" secondItem="kKu-vO-ukJ" secondAttribute="trailing" constant="20" id="L9Q-dA-GN2"/>
+                            <constraint firstItem="6Ms-2C-xvo" firstAttribute="leading" secondItem="j9S-gG-hLt" secondAttribute="leading" constant="20" id="LG0-c5-hRP"/>
+                            <constraint firstItem="kKu-vO-ukJ" firstAttribute="top" secondItem="j9S-gG-hLt" secondAttribute="top" constant="5" id="QvH-mQ-ddn"/>
+                            <constraint firstItem="6Ms-2C-xvo" firstAttribute="top" secondItem="kKu-vO-ukJ" secondAttribute="bottom" constant="20" id="b1p-bB-W1D"/>
+                            <constraint firstItem="kKu-vO-ukJ" firstAttribute="leading" secondItem="j9S-gG-hLt" secondAttribute="leading" constant="20" id="gYN-he-Pkn"/>
                             <constraint firstItem="j9S-gG-hLt" firstAttribute="bottom" secondItem="6Ms-2C-xvo" secondAttribute="bottom" id="xgZ-gB-FeQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="kKu-vO-ukJ" id="KBP-zi-U5v"/>
+                        <outlet property="tableView" destination="6Ms-2C-xvo" id="jQR-pR-yxl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJF-T6-c1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1642" y="1057"/>
+            <point key="canvasLocation" x="-1643.5114503816794" y="1056.3380281690143"/>
         </scene>
         <!--Phone Number View Controller-->
         <scene sceneID="pIz-PC-Iki">
@@ -169,6 +175,9 @@
                                                                 <color key="value" name="AccentColor"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didTapExtensionButton:" destination="VZ0-wG-t3q" eventType="touchUpInside" id="92w-w5-DPB"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-NX-gTh">
                                                         <rect key="frame" x="82" y="0.0" width="211" height="50"/>

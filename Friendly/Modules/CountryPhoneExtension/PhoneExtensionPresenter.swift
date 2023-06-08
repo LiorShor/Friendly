@@ -7,7 +7,7 @@
 
 import SourceModel
 
-protocol PhoneExtensionViewable: class {
+protocol PhoneExtensionViewable: AnyObject {
     func setupTableView(with modelCollection: ModelCollection?)
 }
 
@@ -33,5 +33,21 @@ class PhoneExtensionPresenter: Presentable {
     func viewDidLoad() {
         // TODO: replace `nil` with data from paramaterable
         view?.setupTableView(with: nil)
+        actions.fetchCountries { [weak self] response, error in
+            guard let items = response?.items else {
+                // TODO: Add error popup
+                return
+            }
+            self?.parameters.setCountries(items: items)
+            self?.view?.setupTableView(with: self?.parameters.countriesCollection)
+        }
+    }
+    
+    func filterSearch(text: String) {
+        if text == .empty {
+            view?.setupTableView(with: parameters.countriesCollection)
+        } else {
+            view?.setupTableView(with: CountriesCollection(items: parameters.countriesCollection?.items.filter { $0.name?.contains(text) ?? false } ?? []))
+        }
     }
 }

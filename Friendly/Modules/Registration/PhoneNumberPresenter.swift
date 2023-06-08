@@ -29,4 +29,8 @@ class PhoneNumberPresenter: Presentable {
     func viewDidLoad() {
 
     }
+    
+    func didTapExtensionButton() {
+        coordinator?.presentPhoneExtensions()
+    }
 }

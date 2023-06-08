@@ -11,7 +11,7 @@ import Moya
 class NetworkManager<E: TargetType> {
     
     typealias EndPoint = E
-    
+
     private var provider: MoyaProvider<EndPoint>?
     
     init() {

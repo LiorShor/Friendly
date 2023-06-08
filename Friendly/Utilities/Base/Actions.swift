@@ -8,5 +8,9 @@
 import Foundation
 
 class Actions {
+    let dataProviders: DataProviders
     
+    init(dataProviders: DataProviders) {
+        self.dataProviders = dataProviders
+    }
 }

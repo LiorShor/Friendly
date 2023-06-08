@@ -1,0 +1,27 @@
+//
+//  StaticDataProvider.swift
+//  Friendly
+//
+//  Created by Lior Shor on 27/05/2023.
+//
+
+import Foundation
+import SourceModel
+
+typealias Parsable = Codable & JSONResolver
+
+class StaticDataProvider {
+    private let networkManager = NetworkManager<StaticEndPoints>()
+    
+    func fetchFromLocalFile<T: Parsable>(_ endpoint: StaticEndPoints, completion: @escaping (Constants.Result<T>) -> Void) {
+        do {
+            let model: T = try T
+                .resolve(endpoint.localFileDataEncoded)
+                .parse(type: T.self, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy.iso8601, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy.useDefaultKeys)
+            completion(.success(model))
+            
+        } catch {
+            
+        }
+    }
+}

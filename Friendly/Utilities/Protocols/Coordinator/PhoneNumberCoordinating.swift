@@ -7,4 +7,5 @@
 
 protocol PhoneNumberCoordinating where Self: Coordinator {
     // Move me to  📁 Base -> 📁 Coordinator -> 📁 Protocols
+    func presentPhoneExtensions()
 }
