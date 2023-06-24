@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinating & PhoneExtensionCoordinating{
+class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinating & PhoneExtensionCoordinating {
     
     var actions: Actions
     var parameters: Parameters
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    var phoneNumberViewController: UIViewController?
     
     func start() {
         showLogin()
@@ -21,6 +22,7 @@ class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinatin
     
     func finish() {
         childDidFinish(self)
+        dismiss()
     }
     
     required init(parameters: Parameters, actions: Actions, navigationController: UINavigationController) {
@@ -30,9 +32,10 @@ class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinatin
     }
 
     func signInWithPhoneNumber() {
-        let loginViewController = PhoneNumberViewController.instantiate()
-        PhoneNumberWireframe.prepare(loginViewController, actions: actions, parameters: PhoneNumberParameters(), coordinator: self)
-        navigationController.pushViewController(loginViewController, animated: true)
+        phoneNumberViewController = PhoneNumberViewController.instantiate()
+        guard let phoneNumberViewController = phoneNumberViewController as? PhoneNumberViewController else { return }
+        PhoneNumberWireframe.prepare(phoneNumberViewController, actions: actions, parameters: PhoneNumberParameters(), coordinator: self)
+        navigationController.pushViewController(phoneNumberViewController, animated: true)
     }
     
     func showLogin() {
@@ -44,6 +47,7 @@ class LoginCoordinator: Coordinator & PhoneNumberCoordinating & LoginCoordinatin
     func presentPhoneExtensions() {
         let phoneExtensionViewController = PhoneExtensionViewController.instantiate()
         PhoneExtensionWireframe.prepare(phoneExtensionViewController, actions: actions, parameters: PhoneExtensionParameters(), coordinator: self)
+        phoneExtensionViewController.extensionDelegate = phoneNumberViewController as? SelectedExtensionDelegate
         navigationController.present(phoneExtensionViewController, animated: true)
     }
 }

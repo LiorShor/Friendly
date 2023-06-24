@@ -13,9 +13,10 @@ protocol Coordinator: AnyObject {
     var actions: Actions { get set }
     var parameters: Parameters { get set }
     var navigationController: UINavigationController { get set }
-    
+
     func start()
     func finish()
+    func dismiss(animated: Bool)
     
     init(parameters: Parameters, actions: Actions, navigationController: UINavigationController)
 }
@@ -34,5 +35,10 @@ extension Coordinator {
                 break
             }
         }
+    }
+    
+    
+    func dismiss(animated: Bool = true) {
+        navigationController.dismiss(animated: animated)
     }
 }

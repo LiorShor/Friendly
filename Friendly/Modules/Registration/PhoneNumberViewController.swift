@@ -12,12 +12,14 @@ class PhoneNumberViewController: BaseViewController, Storyboarded {
     // MARK: - IBOutlet
     
     
+    @IBOutlet private weak var extensionNumberButton: UIButton!
     @IBOutlet private weak var phoneNumberTextfield: UITextField!
     
     // MARK: - Parameters
     
     private var presenter: PhoneNumberPresenter!
     private var originalButtonFrame: CGRect?
+    weak var selectedExtensionDelegate: SelectedExtensionDelegate?
     
     // MARK: - Lifecycle
     
@@ -61,5 +63,11 @@ extension PhoneNumberViewController: UITextFieldDelegate {
 extension PhoneNumberViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+}
+
+extension PhoneNumberViewController: SelectedExtensionDelegate {
+    func updateExtension(with number: String) {
+        extensionNumberButton.setTitle(number, for: .normal)
     }
 }

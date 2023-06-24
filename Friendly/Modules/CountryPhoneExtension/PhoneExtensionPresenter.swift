@@ -9,6 +9,7 @@ import SourceModel
 
 protocol PhoneExtensionViewable: AnyObject {
     func setupTableView(with modelCollection: ModelCollection?)
+    func navigateBackWithData(_ extensionNumber: String)
 }
 
 class PhoneExtensionPresenter: Presentable {
@@ -49,5 +50,10 @@ class PhoneExtensionPresenter: Presentable {
         } else {
             view?.setupTableView(with: CountriesCollection(items: parameters.countriesCollection?.items.filter { $0.name?.contains(text) ?? false } ?? []))
         }
+    }
+    
+    func selectedExtension(_ extensionNumber: String) {
+        view?.navigateBackWithData(extensionNumber)
+        coordinator?.finish()
     }
 }

@@ -263,6 +263,7 @@
                     <connections>
                         <outlet property="bottomConstraint" destination="AGr-uP-tru" id="eIx-P3-B3L"/>
                         <outlet property="continueButton" destination="hYw-pk-zRe" id="ARJ-bd-NF2"/>
+                        <outlet property="extensionNumberButton" destination="zab-Ib-hsz" id="3aa-pH-wcr"/>
                         <outlet property="phoneNumberTextfield" destination="wqP-NX-gTh" id="dKE-qI-PM4"/>
                     </connections>
                 </viewController>
