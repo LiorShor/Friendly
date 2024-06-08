@@ -1,0 +1,20 @@
+/* 
+  Localizable (Hebrew).strings
+  Friendly
+
+  Created by Lior Shor on 25/05/2023.
+  
+*/
+
+// Mark: - Registration
+
+"SIGN_IN_WITH_APPLE" = "Sign in with Apple";
+"SIGN_IN_WITH_PHONE_NUMBER" = "Sign in with phone number";
+"CAN_WE_GET_YOUR_NUMBER" = "Can we get your number?";
+"NEXT" = "Next";
+"SMS_VERIFICATION_NOTE" = "We'll text you a code to verify you're really you.\nMessage and data rates may apply.";
+"ENTER_YOUR_CODE" = "Enter your code";
+"SEND_AGAIN" = "Resend";
+"YOUR_NUMBER_COLON" = "Your number: %@";
+"WRONG_OTP" = "Invalid code. Please try again";
+"SELECT_COUNTRY_CODE" = "Select country code";

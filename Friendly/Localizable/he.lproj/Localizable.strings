@@ -1,0 +1,20 @@
+/* 
+  Localizable (Hebrew).strings
+  Friendly
+
+  Created by Lior Shor on 25/05/2023.
+  
+*/
+
+// Mark: - Registration
+
+"SIGN_IN_WITH_APPLE" = "התחברות דרך אפל";
+"SIGN_IN_WITH_PHONE_NUMBER" = "התחברות דרך מספר טלפון";
+"CAN_WE_GET_YOUR_NUMBER" = "מהו מספר הטלפון שלך?";
+"NEXT" = "קדימה";
+"SMS_VERIFICATION_NOTE" = "אנחנו שולחים לך הודעה כדי לוודא שזה המספר שלך";
+"ENTER_YOUR_CODE" = "מה הקוד שקיבלת?";
+"SEND_AGAIN" = "שלחו לי שוב";
+"YOUR_NUMBER_COLON" = "המספר שלך: %@";
+"WRONG_OTP" = "לא זיהינו את הקוד. יש לנסות שוב";
+"SELECT_COUNTRY_CODE" = "קוד מדינה";
