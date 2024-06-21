@@ -12,6 +12,7 @@ typealias CountriesCompletion = (_ response: CountriesResponse?, _ error: Error?
 typealias JSONDictionary = [String: Any]
 
 enum Constants {
+    static var phoneExtensionIL = "+972"
     
     enum Result<T: Codable> {
         case success(T)

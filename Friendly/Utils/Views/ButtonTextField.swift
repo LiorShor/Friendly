@@ -31,6 +31,7 @@ struct ButtonTextField: View {
                 .cornerRadius(4)
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(strokeColor, lineWidth: 0.5))
                 .keyboardType(.phonePad)
+                .textContentType(.telephoneNumber)
                 .focused($textFieldFocused)
         }
         .onAppear {
