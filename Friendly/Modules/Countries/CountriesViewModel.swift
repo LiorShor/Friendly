@@ -16,12 +16,7 @@ class CountriesViewModel: ObservableObject {
         }
     }
     var onCountrySelected: ((CountryExtension?) -> Void)?
-    weak var coordinator: Coordinator?
     private var cancellables: Set<AnyCancellable> = []
-    
-    init(coordinator: Coordinator?) {
-        self.coordinator = coordinator
-    }
     
     func fetchCountries() {
         let staticDataProvider = StaticDataProvider()

@@ -7,17 +7,23 @@
 
 import Foundation
 
+protocol PhoneAuthenticationRouter {
+    func proceedToMatchFinder()
+    func presentPhoneExtensions()
+}
+
 class PhoneAuthenticationViewModel: ObservableObject {
-    var coordinator: Coordinator
-    @Published var selectedCountry: CountryExtension?
-    @Published var countryExtension: String = "+972"
-    init(coordinator: Coordinator) {
-        self.coordinator = coordinator
-//        selectedCountry = coordinator.selectedCountry
-        countryExtension = selectedCountry?.countryExtension ?? "+972"
-    }
+    let router: PhoneAuthenticationRouter
     
+    @Published var selectedCountry: CountryExtension?
+    @Published var countryExtension: String = Constants.phoneExtensionIL
+    
+    init(router: PhoneAuthenticationRouter) {
+        self.router = router
+        countryExtension = selectedCountry?.countryExtension ?? Constants.phoneExtensionIL
+    }
+
     func didTapExtensionsButton() {
-        coordinator.present(sheet: .countries)
+        router.presentPhoneExtensions()
     }
 }

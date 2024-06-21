@@ -56,7 +56,8 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginViewModel(coordinator: nil))
+        let coordinator = Coordinator()
+        LoginView(viewModel: LoginViewModel(router: coordinator))
             .environment(\.colorScheme, .dark)
     }
 }

@@ -11,7 +11,6 @@ struct CountriesView: View {
     
     @ObservedObject var viewModel: CountriesViewModel
     @State private var selectedCountry: CountryExtension?
-    @Binding  var didTapExtensionsButton: Bool
     var onCountrySelected: ((CountryExtension?) -> Void)?
     
     var body: some View {
@@ -36,7 +35,6 @@ struct CountriesView: View {
                     withAnimation {
                         selectedCountry = country
                         viewModel.selectedCountry = selectedCountry
-                        didTapExtensionsButton.toggle()
                         onCountrySelected?(selectedCountry)
                     }
                 }
@@ -50,6 +48,6 @@ struct CountriesView: View {
 
 struct CountriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CountriesView(viewModel: CountriesViewModel(coordinator: nil), didTapExtensionsButton: .constant(true))
+        CountriesView(viewModel: CountriesViewModel())
     }
 }

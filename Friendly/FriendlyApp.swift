@@ -11,7 +11,7 @@ import SwiftUI
 struct FriendlyApp: App {
     var body: some Scene {
         WindowGroup {
-            CoordinatorView()
+            AppNavigator()
         }
     }
 }

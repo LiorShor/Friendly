@@ -8,98 +8,90 @@
 import SwiftUI
 
 final class Coordinator: ObservableObject {
-    @Published var path = NavigationPath()
+    public enum Destination: String, Hashable, Codable, Identifiable {
+        
+//        case CountriesView
+        case PhoneAuthentication
+        
+        var id: String {
+            self.rawValue
+        }
+    }
+    enum Page: String, Identifiable {
+        case main, phoneAuthentication
+        
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    enum Sheet: String, Identifiable {
+        case countries
+        
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    enum FullScreenCover: String, Identifiable {
+        case phoneAuthentication
+        
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    @Published var path: [Destination] = []
     @Published var page: Page? = .main
-    @Published var sheet: Sheet?
+    @Published var sheet: Destination?
     @Published var fullScreenCover: FullScreenCover?
+    
+    func pushPhoneAuthentication() {
+        path.append(.PhoneAuthentication)
+    }
+
     var selectedCountry: CountryExtension?
-    
-    // MARK: - Navigation fuctions
-    
-    func push(_ page: Page) {
-        path.append(page)
-    }
-    
-    func pop() {
-        path.removeLast()
-    }
-    
-    func popToRoot() {
-        path.removeLast(path.count)
-    }
-    
-    func dismissSheet() {
-        self.sheet = nil
-    }
-    
-    func dismissFullScreenCover() {
-        self.fullScreenCover = nil
-    }
-    
-    func dismissPage() {
-        self.page = nil
-    }
-    
-    func present(sheet: Sheet) {
-        self.sheet = sheet
-    }
-    
-    func present(fullScreenCover: FullScreenCover) {
-        self.fullScreenCover = fullScreenCover
-    }
-    
-    func present(page: Page) {
-        self.page = page
-    }
     
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
         case .main:
-            LoginView(viewModel: LoginViewModel(coordinator: self))
+            LoginView(viewModel: LoginViewModel(router: self))
         case .phoneAuthentication:
-            PhoneAuthentication(coordinator: self)
+            PhoneAuthentication(viewModel: PhoneAuthenticationViewModel(router: self))
         }
     }
     
     @ViewBuilder
     func build(sheet: Sheet) -> some View {
-//        switch sheet {
-//        case .countries:
-//            CountriesView(didTapExtensionsButton: ., viewModel: CountriesViewModel(coordinator: self))
-//        }
+        switch sheet {
+        case .countries:
+            CountriesView(viewModel: CountriesViewModel())
+        }
     }
     
     @ViewBuilder
     func build(fullScreenCover: FullScreenCover) -> some View {
         switch fullScreenCover {
         case .phoneAuthentication:
-            PhoneAuthentication(coordinator: self)
+            PhoneAuthentication(viewModel: PhoneAuthenticationViewModel(router: self))
         }
     }
+    // MARK: - Navigation fuctions
 }
 
-enum Page: String, Identifiable {
-    case main, phoneAuthentication
-    
-    var id: String {
-        self.rawValue
+extension Coordinator: LoginRouter {
+    func presentCountriesView() {
+        
     }
 }
 
-
-enum Sheet: String, Identifiable {
-    case countries
-    
-    var id: String {
-        self.rawValue
+extension Coordinator: PhoneAuthenticationRouter {
+    func proceedToMatchFinder() {
+            
     }
-}
-
-enum FullScreenCover: String, Identifiable {
-    case phoneAuthentication
     
-    var id: String {
-        self.rawValue
+    func presentPhoneExtensions() {
+        
     }
 }

@@ -9,17 +9,20 @@ import Foundation
 import AuthenticationServices
 import CryptoKit
 
+protocol LoginRouter {
+    func pushPhoneAuthentication()
+}
 
 class LoginViewModel: NSObject, ObservableObject {
     private var currentNonce: String?
-    var coordinator: Coordinator?
+    let router: LoginRouter
     
-    init(coordinator: Coordinator?) {
-        self.coordinator = coordinator
+    init(router: LoginRouter) {
+        self.router = router
     }
     
     func didTapSignInWithPhone() {
-        coordinator?.push(.phoneAuthentication)
+        router.pushPhoneAuthentication()
     }
 }
 

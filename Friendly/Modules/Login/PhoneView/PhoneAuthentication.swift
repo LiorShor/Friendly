@@ -10,8 +10,8 @@ import SwiftUI
 struct PhoneAuthentication: View {
     @ObservedObject var viewModel: PhoneAuthenticationViewModel
     @State var isPresented: Bool = false
-    init(coordinator: Coordinator) {
-        self.viewModel = PhoneAuthenticationViewModel(coordinator: coordinator)
+    init(viewModel: PhoneAuthenticationViewModel) {
+        self.viewModel = viewModel
     }
 
     @State private var text: String = .empty
@@ -44,7 +44,8 @@ struct PhoneAuthentication: View {
             }
         }
         .sheet(isPresented: $isPresented) {
-            CountriesView(viewModel: CountriesViewModel(coordinator: viewModel.coordinator), didTapExtensionsButton: $isPresented) { onCountrySelected in
+            CountriesView(viewModel: CountriesViewModel()) { onCountrySelected in
+                isPresented.toggle()
                 viewModel.countryExtension = onCountrySelected?.countryExtension ?? "+975"
             }
         }
@@ -54,6 +55,6 @@ struct PhoneAuthentication: View {
 
 struct PhoneAuthentication_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneAuthentication(coordinator: Coordinator())
+        PhoneAuthentication(viewModel: PhoneAuthenticationViewModel(router: Coordinator()))
     }
 }
