@@ -12,8 +12,8 @@ struct ButtonTextField: View {
     @Binding var buttonTitle: String
     @FocusState private var textFieldFocused: Bool
     var buttonImage: String = "phone.badge.waveform"
-    var textColor: Color = .systemBlue
-    var strokeColor: Color = .systemBlue
+    var textColor: Color = .blue
+    var strokeColor: Color = .blue
     var cornerRadius: CGFloat = 4
     var didTapButton: (() -> Void)?
     var body: some View {
@@ -23,7 +23,8 @@ struct ButtonTextField: View {
             })
             .frame(width: 130)
             TextField("", text: $text)
-                .textFieldStyle(PlainTextFieldStyle())
+                .focused($textFieldFocused)
+                .textFieldStyle(.plain)
                 .bold()
                 .foregroundColor(textColor)
                 .frame(height: 50)
@@ -32,7 +33,6 @@ struct ButtonTextField: View {
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(strokeColor, lineWidth: 0.5))
                 .keyboardType(.phonePad)
                 .textContentType(.telephoneNumber)
-                .focused($textFieldFocused)
         }
         .onAppear {
             textFieldFocused.toggle()
@@ -42,6 +42,6 @@ struct ButtonTextField: View {
 
 struct ButtonTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonTextField(buttonTitle: .constant(""))
+        ButtonTextField(buttonTitle: .constant(.empty))
     }
 }

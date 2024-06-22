@@ -8,17 +8,9 @@
 import SwiftUI
 
 final class Coordinator: ObservableObject {
-    public enum Destination: String, Hashable, Codable, Identifiable {
-        
-//        case CountriesView
-        case PhoneAuthentication
-        
-        var id: String {
-            self.rawValue
-        }
-    }
-    enum Page: String, Identifiable {
-        case main, phoneAuthentication
+    public enum Page: String, Identifiable {
+        case otpView
+        case phoneAuthentication
         
         var id: String {
             self.rawValue
@@ -41,24 +33,19 @@ final class Coordinator: ObservableObject {
         }
     }
 
-    @Published var path: [Destination] = []
-    @Published var page: Page? = .main
-    @Published var sheet: Destination?
+    @Published var path: [Page] = []
+    @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
     
-    func pushPhoneAuthentication() {
-        path.append(.PhoneAuthentication)
-    }
-
-    var selectedCountry: CountryExtension?
+    // MARK: - Navigation fuctions
     
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
-        case .main:
-            LoginView(viewModel: LoginViewModel(router: self))
         case .phoneAuthentication:
             PhoneAuthentication(viewModel: PhoneAuthenticationViewModel(router: self))
+        case .otpView:
+            OtpView()
         }
     }
     
@@ -77,18 +64,17 @@ final class Coordinator: ObservableObject {
             PhoneAuthentication(viewModel: PhoneAuthenticationViewModel(router: self))
         }
     }
-    // MARK: - Navigation fuctions
 }
 
 extension Coordinator: LoginRouter {
-    func presentCountriesView() {
-        
+    func pushPhoneAuthentication() {
+        path.append(.phoneAuthentication)
     }
 }
 
 extension Coordinator: PhoneAuthenticationRouter {
-    func proceedToMatchFinder() {
-            
+    func proceedToOtp() {
+        path.append(.otpView)
     }
     
     func presentPhoneExtensions() {

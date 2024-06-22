@@ -8,6 +8,7 @@
 
 // Mark: - Registration
 
+"APP_NAME" = "Friendly";
 "SIGN_IN_WITH_APPLE" = "התחברות דרך אפל";
 "SIGN_IN_WITH_PHONE_NUMBER" = "התחברות דרך מספר טלפון";
 "CAN_WE_GET_YOUR_NUMBER" = "מהו מספר הטלפון שלך?";

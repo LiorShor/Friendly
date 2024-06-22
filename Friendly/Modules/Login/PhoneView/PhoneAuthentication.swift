@@ -33,15 +33,11 @@ struct PhoneAuthentication: View {
                 .font(.caption2)
                 .padding(.leading)
             Spacer()
-            HStack {
-                Spacer()
-                CustomSocialButton(text: .constant(Translations.NEXT.localized), image: .empty, textColor: .systemBlue, strokeColor: .systemBlue)
-                    .padding(.horizontal, 50)
-                    .onTapGesture {
-                        
-                    }
-                Spacer()
+            CustomSocialButton(text: .constant(Translations.NEXT.localized), image: .empty, textColor: .blue, strokeColor: .blue) {
+                viewModel.didTapContinueButton()
             }
+            .padding(.horizontal, 50)
+            .padding(.bottom, 50)
         }
         .sheet(isPresented: $isPresented) {
             CountriesView(viewModel: CountriesViewModel()) { onCountrySelected in

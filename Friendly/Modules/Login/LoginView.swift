@@ -16,33 +16,33 @@ struct LoginView: View {
 
     var body: some View {
         ZStack {
-            Color.systemBackground
+            Color(.backgroundColor)
                 .ignoresSafeArea()
             VStack {
-                Image("Friendly")
+                Image(name: .friendly)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(10)
                     .frame(width: 100, height: 100)
                     .padding(.top, 100)
-                Text("Friendly")
+                Text(Translations.APP_NAME.localized)
                     .font(.largeTitle)
                     .bold()
-                    .foregroundColor(Color.systemBlue)
+                    .foregroundColor(Color.blue)
                 Spacer()
                 VStack(spacing: 15) {
                     CustomSocialButton(
                         text: .constant(Translations.SIGN_IN_WITH_APPLE.localized), image: "apple.logo",
-                        textColor: Color.systemBlue,
-                        strokeColor: Color.systemBlue,
+                        textColor: Color.blue,
+                        strokeColor: Color.blue,
                         action: {
-                                                    viewModel.performAppleSignIn()
+                            viewModel.performAppleSignIn()
                         })
                     
                     CustomSocialButton(
                         text: .constant(Translations.SIGN_IN_WITH_PHONE_NUMBER.localized), image: "phone.fill",
-                        textColor: Color.systemBlue,
-                        strokeColor: Color.systemBlue,
+                        textColor: Color.blue,
+                        strokeColor: Color.blue,
                         action: {
                             viewModel.didTapSignInWithPhone()
                         }

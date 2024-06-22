@@ -16,8 +16,8 @@ struct AppNavigator: View {
             // The navigationDestination modifier u put on the root view of the navigator, in this case - FirstView
             // That can also be dynamic using an if or switch statements
             LoginView(viewModel: LoginViewModel(router: coordinator))
-                .navigationDestination(for: Coordinator.Destination.self) { destination in
-                    coordinator.build(page: .phoneAuthentication)
+                .navigationDestination(for: Coordinator.Page.self) { destination in
+                    coordinator.build(page: destination)
                 }
                 .sheet(item: $coordinator.sheet) { sheet in
                     coordinator.build(sheet: .countries)

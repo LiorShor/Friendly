@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PhoneAuthenticationRouter {
-    func proceedToMatchFinder()
+    func proceedToOtp()
     func presentPhoneExtensions()
 }
 
@@ -25,5 +25,9 @@ class PhoneAuthenticationViewModel: ObservableObject {
 
     func didTapExtensionsButton() {
         router.presentPhoneExtensions()
+    }
+    
+    func didTapContinueButton() {
+        router.proceedToOtp()
     }
 }

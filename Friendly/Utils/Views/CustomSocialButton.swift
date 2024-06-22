@@ -12,7 +12,7 @@ struct CustomSocialButton: View {
     var image: String
     var textColor: Color
     var strokeColor: Color
-    var backgroundColor: Color = .systemBackground
+    var backgroundColor: Color = Color(.backgroundColor)
     var cornerRadius: CGFloat = 25
     var isSpacerNeeded: Bool = true
     
@@ -54,6 +54,6 @@ struct CustomSocialButton: View {
 }
 struct CustomSocialButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomSocialButton(text: .constant("Sign in with Apple"), image: "apple.logo", textColor: .systemPurple, strokeColor: .systemPurple, isSpacerNeeded: true)
+        CustomSocialButton(text: .constant("Sign in with Apple"), image: "apple.logo", textColor: .purple, strokeColor: .purple, isSpacerNeeded: true)
     }
 }
